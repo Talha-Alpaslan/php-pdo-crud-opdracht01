@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `Persoon` (
 --
 
 INSERT INTO `Persoon` (`Id`, `Voornaam`, `Tussenvoegsel`, `Achternaam`, `Telefoonnummer`, `Straatnaam`, `huisnummer`, `woonplaats`, `postcode`, `landnaam`) VALUES
-(13, 'Arjann', 'den', 'Ruijterr');
+(13, 'Arjan', 'de', 'Ruijter','0612345678', 'Daltonlaan', '300', 'Utrecht', '3515', 'Nederland');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
