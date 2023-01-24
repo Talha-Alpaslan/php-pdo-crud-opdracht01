@@ -13,7 +13,7 @@
 
     <form action="create.php" method="post">
         <label for="firstname">Voornaam:</label><br>
-        <input type="text" name="firstname" id="firstname"><br>
+        <input type="text" name="firstname" id="firstname"><br><br>
 
         <label for="infix">Tussenvoegsel:</label><br>
         <input type="text" name="infix" id="infix"><br>
