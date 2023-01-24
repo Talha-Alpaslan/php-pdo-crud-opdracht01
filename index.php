@@ -13,13 +13,31 @@
 
     <form action="create.php" method="post">
         <label for="firstname">Voornaam:</label><br>
-        <input type="text" name="firstname" id="firstname"><br><br>
+        <input type="text" name="firstname" id="firstname"><br>
 
         <label for="infix">Tussenvoegsel:</label><br>
         <input type="text" name="infix" id="infix"><br>
 
         <label for="lastname">Achternaam:</label><br>
         <input type="text" name="lastname" id="lastname"><br>
+
+        <label for="telNumber">Telefoonnummer:</label><br>
+        <input type="text" name="telNumber" id="telNumber"><br>
+        
+        <label for="streetname">straatnaam:</label><br>
+        <input type="text" name="streetname" id="streetname"><br>
+
+        <label for="homenumber">huisnummer:</label><br>
+        <input type="text" name="homenumber" id="homenumber"><br>
+
+        <label for="liveplace">woonplaats:</label><br>
+        <input type="text" name="liveplace" id="liveplace"><br>
+
+        <label for="postcode">postcode:</label><br>
+        <input type="text" name="postcode" id="postcode"><br>
+
+        <label for="country">landnaam:</label><br>
+        <input type="text" name="country" id="country"><br>
 
         <input type="submit" value="Verstuur">
     </form>

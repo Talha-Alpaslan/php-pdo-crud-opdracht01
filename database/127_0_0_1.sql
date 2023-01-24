@@ -35,6 +35,12 @@ CREATE TABLE IF NOT EXISTS `Persoon` (
   `Voornaam` varchar(60) NOT NULL,
   `Tussenvoegsel` varchar(10) NOT NULL,
   `Achternaam` varchar(60) NOT NULL,
+  `Telefoonnummer` varchar(10) NOT NULL,
+  `Straatnaam` varchar(60) NOT NULL,
+  `huisnummer` varchar(4) NOT NULL,
+  `woonplaats` varchar(60) NOT NULL,
+  `postcode` varchar(4) NOT NULL,
+  `landnaam` varchar(60) NOT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
@@ -42,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `Persoon` (
 -- Gegevens worden geëxporteerd voor tabel `Persoon`
 --
 
-INSERT INTO `Persoon` (`Id`, `Voornaam`, `Tussenvoegsel`, `Achternaam`) VALUES
+INSERT INTO `Persoon` (`Id`, `Voornaam`, `Tussenvoegsel`, `Achternaam`, `Telefoonnummer`, `Straatnaam`, `huisnummer`, `woonplaats`, `postcode`, `landnaam`) VALUES
 (13, 'Arjann', 'den', 'Ruijterr');
 COMMIT;
 

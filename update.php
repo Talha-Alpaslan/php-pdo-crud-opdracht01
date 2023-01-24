@@ -24,7 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "UPDATE Persoon
                 SET Voornaam = :Voornaam,
                     Tussenvoegsel = :Tussenvoegsel,
-                    Achternaam = :Achternaam
+                    Achternaam = :Achternaam,
+                    Telefoonnummer = :Telefoonnummer,
+                    straatnaam = :straatnaam,
+                    huisnummer = :huisnummer,
+                    woonplaats = :woonplaats,
+                    postcode = :postcode,
+                    landnaam = :landnaam,
                 WHERE Id = :Id";
 
         // Roep de prepare-method aan van het PDO-object $pdo
@@ -35,6 +41,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $statement->bindValue(':Voornaam', $_POST['firstname'], PDO::PARAM_STR);
         $statement->bindValue(':Tussenvoegsel', $_POST['infix'], PDO::PARAM_STR);
         $statement->bindValue(':Achternaam', $_POST['lastname'], PDO::PARAM_STR);
+        $statement->bindValue(':Telefoonnummer', $_POST['telNumber'], PDO::PARAM_STR);
+        $statement->bindValue(':straatnaam', $_POST['streetname'], PDO::PARAM_STR);
+        $statement->bindValue(':huisnummer', $_POST['homenumber'], PDO::PARAM_STR);
+        $statement->bindValue(':woonplaats', $_POST['liveplace'], PDO::PARAM_STR);
+        $statement->bindValue(':postcode', $_POST['postcode'], PDO::PARAM_STR);
+        $statement->bindValue(':landnaam', $_POST['country'], PDO::PARAM_STR);
 
         // We gaan de query uitvoeren op de mysql-server
         $statement->execute();
@@ -88,6 +100,24 @@ $result = $statement->fetch(PDO::FETCH_OBJ);
 
         <label for="lastname">Achternaam:</label><br>
         <input type="text" name="lastname" id="lastname" value="<?php echo $result->Achternaam; ?>"><br><br>
+
+        <label for="telNumber">Telefoonnummer:</label><br>
+        <input type="text" name="telNumber" id="telNumber" value="<?php echo $result->Telefoonnummer; ?>"><br><br>
+
+        <label for="streetname">straatnaam:</label><br>
+        <input type="text" name="streetname" id="streetname" value="<?php echo $result->straatnaam; ?>"><br><br>
+
+        <label for="homenumber">huisnummer:</label><br>
+        <input type="text" name="homenumber" id="homenumber" value="<?php echo $result->huisnummer; ?>"><br><br>
+
+        <label for="liveplace">woonplaats:</label><br>
+        <input type="text" name="liveplace" id="liveplace" value="<?php echo $result->woonplaats; ?>"><br><br>
+
+        <label for="postcode">postcode:</label><br>
+        <input type="text" name="postcode" id="postcode" value="<?php echo $result->postcode; ?>"><br><br>
+
+        <label for="country">landnaam:</label><br>
+        <input type="text" name="country" id="country" value="<?php echo $result->landnaam; ?>"><br><br>
 
         <input type="hidden" name="Id" value="<?php echo $result->Id; ?>">
 
